@@ -3,5 +3,10 @@
         "expandable-chapters",
         "theme-rangle-io"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "theme-rangle-io": {
+            "styles": "",
+            "showLevel": false
+        }
+    }
 }
