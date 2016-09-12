@@ -1,12 +1,6 @@
 {
     "plugins": [
-        "expandable-chapters",
-        "theme-rangle-io"
+        "expandable-chapters"
     ],
-    "pluginsConfig": {
-        "theme-rangle-io": {
-            "styles": "",
-            "showLevel": false
-        }
-    }
+    "pluginsConfig": {}
 }
