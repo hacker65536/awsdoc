@@ -1,4 +1,4 @@
 # Summary
 
-* [AWS DOCS](README.md)
+* [AWS Docs](README.md)
 
