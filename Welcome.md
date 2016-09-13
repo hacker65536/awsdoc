@@ -29,4 +29,25 @@ Amazon ECS上にアプリケーションを動かすために*task definition*�
 
 下記は簡単なtask definitionの例である。Nginxのwebサーバコンテナが一つあるもの。より拡張された複数のコンテナを使った例は[Example Task Definitions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/example_task_definitions.html)を参照。 
 
+```json
+{
+      "family": "webserver",
+      "containerDefinitions": [
+      {
+              "name": "web",
+              "image": "nginx",
+              "cpu": 99,
+              "memory": 100,
+              "portMappings": [{
+                      "containerPort": 80,
+                      "hostPort": 80
+              }]
+      }
+} 
+```
+###Tasks and Scheduling
+
+taskとはクラスタ内にあるコンテナインスタンス上のtask definitionの実体化したものある。Amazon ECSにアプリのtask definitionを作れば、クラスタに起動できるタスクの数を設定できる。
+
+Amazon ECS taskスケジューラーはコンテナインスタンスにタスク配置することを受け持つ。いくつか異なるスケジューリングオプションを利用できる。例えば、指定した数のtaskを同時に起動やメンテンナスをするよう定義できる。異なるスケジューリングオプションについては[Scheduling Amazon ECS Tasks](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html)を参照。
 
