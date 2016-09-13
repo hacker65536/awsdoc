@@ -20,4 +20,10 @@ Amazon ECS は一つのリージョン内のマルチAZにわたる高い可用�
 ###Continers and Images
 Amazon ECSにアプリケーションをデプロイする場合、アプリケーションコンポーネントはコンテナで動かせるように構成する必要がある。Docker コンテナはソフトウェア開発において標準化されたユニットで、アプリケーションを動かすに必要なソフトウェア、コード、ランタイム、システムツール、ライブラリー等すべて含まれている。コンテナはイメージと呼ばれるリードオンリーなテンプレートから作られる。
 
-コンテナイメージは一般的にDockerfileから作られる。Dockerfileはコンテナに含まれるすべてのコンポーネントが記述されているplan textファイルである。レジストリーに保存されたコンテナイメージをダウンロードし、コンテナインスタンス上で動かすことが出来る。より詳細な情報は[Docker Basics](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html)
+コンテナイメージは一般的にDockerfileから作られる。Dockerfileはコンテナに含まれるすべてのコンポーネントが記述されているplan textファイルである。レジストリーに保存されたコンテナイメージをダウンロードし、コンテナインスタンス上で動かすことが出来る。より詳細な情報は[Docker Basics](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html)を参照。
+
+![ecsfig2](ecsfig2.svg)
+
+###Task Definitions
+
+
