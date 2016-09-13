@@ -60,3 +60,4 @@ Amazon ECSはEC2インスタンスの論理グループであるclusterにtask�
 ###Container Agent
 クラスタの個々のインスタンス上でcontainer agentが起動されている。Amazon ECSからの要求を受ける度にtaskの起動、停止や、現在のインスタンス上で起動しているtaskのリソースの利用状況をAmaozn ECSに送る役割をしている。より詳細の内容は[Amazon ECS Container Agent](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_agent.html)を参照。
 
+##How to Get Started with Amazon ECS
