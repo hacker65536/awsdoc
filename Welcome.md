@@ -17,7 +17,7 @@ Amazon ECS は一つのリージョン内のマルチAZにわたる高い可用�
 
 次のセクションではAmazon ECS アーキテクチャの個々の要素により詳細に触れていく。
 
-###Continers and Images
+###Containers and Images
 Amazon ECSにアプリケーションをデプロイする場合、アプリケーションコンポーネントはコンテナで動かせるように構成する必要がある。Docker コンテナはソフトウェア開発において標準化されたユニットで、アプリケーションを動かすに必要なソフトウェア、コード、ランタイム、システムツール、ライブラリー等すべて含まれている。コンテナはイメージと呼ばれるリードオンリーなテンプレートから作られる。
 
 コンテナイメージは一般的にDockerfileから作られる。Dockerfileはコンテナに含まれるすべてのコンポーネントが記述されているplan textファイルである。レジストリーに保存されたコンテナイメージをダウンロードし、コンテナインスタンス上で動かすことが出来る。より詳細な情報は[Docker Basics](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html)を参照。
@@ -25,5 +25,8 @@ Amazon ECSにアプリケーションをデプロイする場合、アプリケ�
 ![ecsfig2](ecsfig2.svg)
 
 ###Task Definitions
+Amazon ECS上にアプリケーションを動かすために*task definition*を作る。task definitionはjsonフォーマットのテキストファイルでアプリケーションの形を一つ以上記述する。それはアプリケーションの設計図として考える事ができる。Task definitionsは様々のパラメータを設定できる。例えば、どのリポジトリにあるコンテナを使用するか、どのポートをコンテナインスタンスに開けるか、コンテナはどのdata volumeを使用すべきかなど。より詳しい内容は[Amazon ECS Task Definitions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_defintions.html)を参照。
+
+下記は簡単なtask definitionの例である。Nginxのwebサーバコンテナが一つあるもの。より拡張された複数のコンテナを使った例は[Example Task Definitions](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/example_task_definitions.html)を参照。 
 
 
